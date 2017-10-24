@@ -2,11 +2,17 @@
 
 Les services web géographiques - TP sur GeoServer
 ------------------------------
-Novembre 2016.
+Octobre 2017.
 
 # Objectifs
 
- - comprendre le fonctionnement d'un serveur géographique
+## Globaux
+
+ - comprendre la place d'un serveur géographique dans une infrastructure de données spatiales (IDS)
+ - situer les enjeux autour des services dans l'écosystème
+
+## Techniques 
+
  - prendre en main la configuration et l'administration d'un serveur géographique (GeoServer)
  - s'essayer aux différentes façons d'administrer GeoServer
 
@@ -130,21 +136,30 @@ Plugins intégrés :
 docker run -d winsent/geoserver
 ```
 
-> Source : https://hub.docker.com/r/kartoza/geoserver/
+> Source : https://hub.docker.com/r/winsent/geoserver/
 
 ## Importance et structure du dossier de données _data_dir_
 
-### Le data_dir au centre du fonctionnement de GeoServer
+### Le *data_dir* au centre du fonctionnement de GeoServer
 
 Comme son nom nom l'indique, il s'agit du dossier des données persistantes de GeoServer, y compris les paramètres de configuration.
 
-Pour un usage en production, comme d'ailleurs pour toute architecture sur le [modèle client-serveur tripartite](https://fr.wikipedia.org/wiki/Architecture_trois_tiers), il est recommandé de bien séparer le data_dir du reste de l'installation l'application.
+Pour un usage en production, comme d'ailleurs pour toute architecture sur le [modèle client-serveur tripartite](https://fr.wikipedia.org/wiki/Architecture_trois_tiers), il est recommandé de bien séparer *le data_dir* du reste de l'installation l'application.
 
-### Structure du data_dir
+### Structure du *data_dir*
 
-Si l'interface graphique d'administration et l'API REST de configuration ont diminué l'intérêt de la connaissance de la structure détaillée du data_dir, c'est important d'en connaître les grandes lignes pour mieux gérer les cas problématiques.
+Si l'interface graphique d'administration et l'API REST de configuration ont diminué l'intérêt de la connaissance de la structure détaillée du *data_dir*, c'est important d'en connaître les grandes lignes pour mieux gérer les cas problématiques.
 
 Pour en savoir plus, consulter [la page de la documentation officielle dédiée à la structure du data_dir](http://docs.geoserver.org/stable/en/user/datadirectory/structure.html).
+
+Dans le *data_dir*, on retrouve l'ensemble des fichiers utilisés par GeoServer :
+
+- les données stockées en fichiers évidemment
+- configuration (accès, styles, projections personnalisées...)
+- logs
+- plugins
+- les bibliothèques tierces utilisées pour les fonctionnalités de démonstration (OpenLayers notamment)
+
 
 ________
 
@@ -154,7 +169,8 @@ Une fois installé, se rendre sur [l'interface d'administration](http://localhos
 
 ## Renseigner les informations de base
 
-Les serveurs géographiques ont, par définition, vocation à être publiés. La première étape de la configuration consiste donc à renseigner les métadonnées sur le serveur et les services.
+Les serveurs géographiques ont, par définition, vocation à être publiés. Comme toute publication, il faut en indiquer les "mentions légales".
+La première étape de la configuration consiste donc à renseigner les métadonnées sur le serveur et les services.
 
 ### Le point de contact
 
@@ -277,8 +293,7 @@ Pour avoir un aperçu du rendu des couches, GeoServer embarque un OpenLayers pou
 
 ### PostGIS
 
- 1. Créer
- 2. Un entrepôt de données de type PostGIS. Entrer les informations de connexion à la base locale. Si elle n'existe pas, se connecter à celle-ci :
+ 1. Créer un entrepôt de données de type PostGIS. Entrer les informations de connexion à la base locale. Si elle n'existe pas, se connecter à celle-ci :
 	 - host : "postgresql-guts.alwaysdata.net"
 	 - database : "guts_gis"
 	 - user : "guts_player"
@@ -297,6 +312,21 @@ Pour avoir un aperçu du rendu des couches, GeoServer embarque un OpenLayers pou
  1. Créer un entrepôt de données à partir du [WFS de la
     PPIGE](https://www.ppige-npdc.fr/geoserver/ows?service=wfs&version=2.0.0&request=GetCapabilities).
  2. Publier l'une des couches issue de l'entrepôt opendata.
+
+
+----------
+
+# Optimiser le cache des tuiles
+
+## Gérer le Geowebcache intégré à GeoServer
+
+// A VENIR //
+
+## 
+
+
+
+----------
 
 
 # Manipuler les différents services sur les données ajoutées

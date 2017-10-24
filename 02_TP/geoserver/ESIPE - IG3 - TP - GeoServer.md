@@ -273,7 +273,7 @@ Pour avoir un aperçu du rendu des couches, GeoServer embarque un OpenLayers pou
  1. Télécharger plusieurs shapefiles depuis [data.gouv.fr](http://www.data.gouv.fr/fr/datasets/?q=&format=shp). Par exemple :
 	 - [Vidéosurveillance](http://www.data.gouv.fr/fr/datasets/videoprotection-implantation-des-cameras-551635/) ;
 	 - [Stations RATP](http://www.data.gouv.fr/fr/datasets/positions-geographiques-des-stations-du-reseau-ratp-ratp/)
-	 - [Stations Transilien](http://www.data.gouv.fr/fr/datasets/cartographie-openstreetmap-des-gares-transilien/)
+	 - [Stations Transilien](http://www.data.gouv.fr/fr/datasets/cartographie-openstreetmap-des-gares-sncf-transilien-en-ile-de-france-1/)
 	 - [Vélib](http://www.data.gouv.fr/fr/datasets/velib-paris-et-communes-limitrophes-idf/)
  2. Déposer les shapefiles dans un sous-dossier `datagouv_shapes` dans le *data_dir* ;
  3. Ajouter l'entrepôt correspondant ;

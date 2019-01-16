@@ -294,8 +294,8 @@ Pour avoir un aperçu du rendu des couches, GeoServer embarque un OpenLayers pou
 
 #### GeoTIFF
 
- 1. Télécharger une [donnée raster de test](http://data.opengeo.org/bmreduced.tiff) ;
- 2. La déposer dans le *data_dir*
+ 1. Télécharger une [donnée raster de test](http://www.terracolor.net/download/tc_ng_sfbay_us_geotiff.zip) ;
+ 2. Dézipper au besoin et la déposer dans le *data_dir*
  3. Publier la donnée
 
 ## Ajouter des données vectorielles stockées en SGBD

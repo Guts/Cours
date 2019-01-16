@@ -313,7 +313,7 @@ Pour avoir un aperçu du rendu des couches, GeoServer embarque un OpenLayers pou
 
 ### Service WMS
 
- 1. Créer un entrepôt de données à partir du [WMS des données Corine Land Cover du MEDDE](http://clc.developpement-durable.gouv.fr/geoserver/wms?request=GetCapabilities&service=WMS).
+ 1. Créer un entrepôt de données à partir du [WMS des données de Lorient Agglomération de GéoBretagne](https://geobretagne.fr/geoserver/lorientagglo/wms?request=GetCapabilities&service=WMS).
  2. Publier l'une des couches issue de l'entrepôt clc.
 
 ### Service WFS

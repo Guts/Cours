@@ -102,8 +102,10 @@ Permet de déployer :
 
 #### Avec le plugin WPS - Camptocamp
 
+> Adapter le chemin sur la machine hôte pour le volume
+
 ```bash
-docker run -d -p 8080:8080 camptocamp/geoserver:2.9
+docker run -d -p 8080:8080 -v /your/host/data/path:/geoserver_data/data camptocamp/geoserver:2.13
 ```
 
 > Source : https://hub.docker.com/r/camptocamp/geoserver/

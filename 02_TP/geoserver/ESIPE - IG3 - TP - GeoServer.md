@@ -91,26 +91,32 @@ Une fois l'installation terminée :
 
 Plusieurs recettes (images) de conteneurs Docker sont disponibles pour déployer facilement GeoServer. Voici une sélection.
 
-#### Basique 
-
-Permet de déployer :
- - Ubuntu 14.04
- - Tomcat 8
- - GeoServer 2.6.x
-
-> Source :   https://github.com/eliotjordan/docker-geoserver
-
-#### Avec le plugin WPS - Camptocamp
-
-> Adapter le chemin sur la machine hôte pour le volume
-
-```bash
-docker run -d -p 8080:8080 -v /your/host/data/path:/geoserver_data/data camptocamp/geoserver:2.13
-```
+#### Image de camptocamp
 
 > Source : https://hub.docker.com/r/camptocamp/geoserver/
 
-#### Personnalisable - Kartoza
+**Nota bene** : adapter le chemin sur la machine hôte pour le volume
+
+```bash
+# lancer le conteneur
+docker run -d --name geoservertp -p 9876:8080 -v /your/host/data/path:/geoserver_data/data camptocamp/geoserver:2.13
+```
+
+Accéder à l'interface d'administration :
+
+- se rendre sur <http://localhost:9876>
+- Identifiant : admin
+- Mot de passe : geoserver
+
+Pour :
+
+```bash
+docker exec -it geoservertp bash
+```
+
+#### Autres
+
+##### Personnalisable - Kartoza
 
 ```bash
 docker pull kartoza/geoserver
@@ -118,7 +124,7 @@ docker pull kartoza/geoserver
 
 > Source : https://hub.docker.com/r/kartoza/geoserver/
 
-#### Avec GDAL - OLOLO
+##### Avec GDAL - OLOLO
 
 Déploie :
 
@@ -138,7 +144,9 @@ Plugins intégrés :
 docker run -d winsent/geoserver
 ```
 
-> Source : https://hub.docker.com/r/winsent/geoserver/
+> Source : <https://hub.docker.com/r/winsent/geoserver/>
+
+----
 
 ## Importance et structure du dossier de données _data_dir_
 
@@ -162,8 +170,7 @@ Dans le *data_dir*, on retrouve l'ensemble des fichiers utilisés par GeoServer 
 - plugins
 - les bibliothèques tierces utilisées pour les fonctionnalités de démonstration (OpenLayers notamment)
 
-
-________
+----
 
 # Prise en main
 

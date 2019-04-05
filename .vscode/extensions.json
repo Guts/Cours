@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+  	"christian-kohler.path-intellisense",
+  	"coenraads.bracket-pair-colorizer",
+  	"davidanson.vscode-markdownlint",
+  	"eriklynd.json-tools",
+  	"mikestead.dotenv",
+  	"ms-ceintl.vscode-language-pack-fr",
+    "ms-python.python",
+    "pkief.material-icon-theme"
+  ]
+}

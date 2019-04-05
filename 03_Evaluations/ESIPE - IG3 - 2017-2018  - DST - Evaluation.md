@@ -1,6 +1,6 @@
 GIS 2.0 - Évaluation (2h)
 ------------------------------
-Janvier 2017.
+Janvier 2018.
 
 # Évaluation
 
@@ -13,22 +13,19 @@ Janvier 2017.
 
 ----------
 
-
 # Énoncé
 
 ## Contexte
 
-Le complexe des 2 parcs d'attractions Disneyland Paris, en situation notoire de fragilité financière (références presse [1](http://www.marianne.net/disneyland-paris-mickey-mouise-100249295.html) et [2](http://www.rtl.fr/actu/societe-faits-divers/disneyland-paris-plombe-par-les-royalties-versees-a-walt-disney-7786816558)), souhaite amorcer une nouvelle dynamique centrée sur le modèle participatif dans le but de renouveler son image et de prendre un virage sur les attractions numériques.
+Le secteur de la géomatique est de plus en plus
 
-La société souhaite étudier la faisabilité d'une "météo" dynamique des attractions basées sur les réseaux sociaux.
 
-![Vue aérienne du complexe Disneyland Paris](https://radiodisneyclub.fr/wp-content/uploads/2015/06/Disneyland-Paris_Plan-25-ans.png)
 
 ## Objectif global
 
-Proposer une POC (*Proof of Concept*) d'une cartographie si possible interactive représentant dynamiquement le baromètre des impressions positives et négatives à l'échelle du complexe, de chacun des deux parcs, de chaque zone et de chaque attraction.
+Proposer 3 pistes fonctionnelles pour analyser l'adéquation entre 
 
-Dans le cadre de la POC, seul Twitter sera utilisé comme source.
+Dans le cadre de la POC, seule la base des offres de GeoRezo sera utilisée.
 
 ## Objectifs fonctionnels
 
@@ -47,28 +44,30 @@ Dans le cadre de la POC, seul Twitter sera utilisé comme source.
  - envisager la prise en compte de sources autres que les réseaux sociaux (journaux...).
  - envisager les questions juridiques et les garde-fous techniques à mettre en place
 
+
 ## Conditions d'évaluation
 
  - La gestion du temps et la capacité à présenter une vision globale et claire de la réponse proposée sont pris en compte dans l'évaluation. "Choisir c'est renoncer", mais "mieux vaut renoncer que tenir un bol plein d'eau" (Lao Tseu).
- - Vous pouvez établir des binômes, l'évaluation est alors la même pour les deux personnes ;
+ - un dessin (ou un schéma) vaut mieux qu'un long discours
+
+### Grille de notation
+
+| Critère 	        	  | Points |
+| :---------------------- | :----: |
+| Cohérence technique 	  | 4 	   |
+| Gestion des données     | 4 	   |
+| Aspects cartographiques | 4 	   |
+| POC codée				  | 2 	   |
+| Clarté et présentation  | 3 	   |
+| Assiduité aux cours     | 2 	   | 
+| Langue française        | 1 	   |
 
 ## Ressources
 
- - données OpenStreetMap sur Disneyland Paris : http://overpass-turbo.eu/s/lut ou :
-	
-	```json
-    (
-	node(48.86361372526071,2.770485877990722,48.8760907210035,2.7811717987060547);
-rel(bn)->.x;
-way(48.86361372526071,2.770485877990722,48.8760907210035,2.7811717987060547);
-  node(w)->.x;
-  rel(bw);
-);
-out meta;
-
-	```
+ - [projet El Paso sur GitHub](https://github.com/guts/elpaso/) - rendu [en dév](http://dev.elgeopaso.fr/) - [en prod](http://www.elgeopaso.fr/)
 ________
 
-> Sources officielles du cours : https://github.com/Guts/ESIPE_IG3_2016
-
 > Contenu rédigé avec [StackEdit](https://stackedit.io/).
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTExODQ2OTUzOCwxNjU2MTQ2Njk2XX0=
+-->

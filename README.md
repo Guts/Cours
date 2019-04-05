@@ -1,6 +1,6 @@
-# ESIPE_IG3_2016
-Supports de cours / TP et notes
+# Supports de cours / TP et notes
 
+Parfois on me demande de donner des cours et/ou des travaux pratiques. Autant centraliser et partager mes supports et ressources.
 
 ## LICENCE
 

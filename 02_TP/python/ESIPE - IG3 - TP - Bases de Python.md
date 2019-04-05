@@ -1,9 +1,8 @@
-Python (2.7.9+)
-=====
+# Python (3.5+) - Bases pour démarrer rapidement
 
-Novembre 2016.
+> Avril 2019
 
-# Introduction
+## Introduction
 
 Python est un **langage interprété, libre, gratuit** et surtout mature et intégré dans de nombreux logiciels et systèmes (multiplateformes). De haut niveau, ses performances n'ont pas vocation à égaler celles de langages plus bas mais son code source en C/C++ lui garantit un excellent rapport qualité/prix (d'apprentissage).
 
@@ -11,12 +10,13 @@ Concernant la géomatique, Python est **l'un des 3 langages les plus utilisés a
 De nombreuses briques logicielles de base en géomatique sont développées en C/C++ (GDAL ou le moteur de QGIS par exemple) mais le profil de ses utilisateurs n'est alors plus celui d'un/e géomaticien/ne.
 
 De part son orientation scripting, Python est présent dans plusieurs logiciels. Notamment :
- - QGIS
- - ArcGIS (via le module arcpy)
- - gvSIG
- - FME
- - MapProxy
- - // A COMPLETER //
+
+- QGIS
+- ArcGIS (via le module arcpy)
+- gvSIG
+- FME
+- MapProxy
+- // A COMPLETER //
 
 A noter que lorsque l'on désigne Python on parle généralement de son interpréteur en C ("C Python") mais qu'il existe d'autres implémentations de l'interpréteur : en Java ("[Jython](http://www.jython.org/)" qui tourne dans une JVM) et en .NET ("[IronPython](http://ironpython.net/)") notamment. Elles sont rarement maintenues correctement.
 
@@ -43,7 +43,7 @@ Le packaging et la gestion des dépendances n'est pas vraiment la force de Pytho
 - Debian : python-software-properties python-virtualenv python-setuptools python-dev
 - Windows : [Microsoft Visual C++ Compiler for Python 2.7](https://www.microsoft.com/en-us/download/details.aspx?id=44266)
 
-Depuis la version 2.7.10 (ou 9 ?), la distribution standard de Python intègre pip qui facilite grandement l'installation et la mise à jour des bibliothèques tierces. D'autres gestionnaires de paquets existent, comme [conda](http://conda.pydata.org/docs/index.html) par exemple qui est multilanguage.
+Depuis la version 2.7.10, la distribution standard de Python intègre pip qui facilite grandement l'installation et la mise à jour des bibliothèques tierces. D'autres gestionnaires de paquets existent, comme [conda](http://conda.pydata.org/docs/index.html) par exemple qui est multilanguage.
 
 Pour connaître les bibliothèques déjà installées sur un système ou dans un environnement virtuel, une seule commande suffit :
 
@@ -66,32 +66,32 @@ Généralement connaître ces principes n'est pas nécessaire pour travailler en
 
 ### Les indispensables de la librairie standard
 
- - os (notamment le module path)
- - sys
- - time
- - logging
- - collections
+- os
+- pathlib
+- sys
+- time
+- logging
 
 ### Les modules tiers indispensables pour la vie de tous les jours
 
- - pip (quand il n'est pas déjà installé)
- - virtualenv
- - [six](https://pypi.python.org/pypi/six) pour arrondir les angles entre les versions 2 et 3 de Python
- - [python-dateutil](https://dateutil.readthedocs.io/), pytz et arrow pour une manipulation complète et sympa des dates
- - [pyttk](https://pypi.python.org/pypi/pyttk) pour des interfaces graphiques bureautiques minimalistes
- - [requests](http://docs.python-requests.org/en/master/) pour manipuler les API web
- - [django](https://www.djangoproject.com/) ou [flask](http://flask.pocoo.org/) pour les applications web
+- pip (quand il n'est pas déjà installé)
+- virtualenv
+- [six](https://pypi.python.org/pypi/six) pour arrondir les angles entre les versions 2 et 3 de Python
+- [python-dateutil](https://dateutil.readthedocs.io/), pytz et arrow pour une manipulation complète et sympa des dates
+- [pyttk](https://pypi.python.org/pypi/pyttk) pour des interfaces graphiques bureautiques minimalistes
+- [requests](http://docs.python-requests.org/en/master/) pour manipuler les API web
+- [django](https://www.djangoproject.com/) ou [flask](http://flask.pocoo.org/) pour les applications web
 
 ### Les modules tiers indispensables pour la vie de géomaticien/ne
 
- - geojson, shapefly, pyshape
- - GDAL et ses différentes surcouches (rasterio, fiona...)
- - OWSLib pour les standards OGC
- - [Pandas](http://pandas.pydata.org/) et sa déclinaison [GéoPandas](http://geopandas.org/) pour tout ce qui est traitement  de volumes de données structurées importants
- - [PySAL](http://pysal.readthedocs.io/en/latest)
- - numpy pour les calculs scientifiques et comme dépendance quasi-systématique
- - [pyproj](https://jswhit.github.io/pyproj/) pour les projections
- - [jinja2](http://jinja.pocoo.org/docs) pour tout ce qui est templating
+- geojson, shapefly, pyshape
+- GDAL et ses différentes surcouches (rasterio, fiona...)
+- OWSLib pour les standards OGC
+- [Pandas](http://pandas.pydata.org/) et sa déclinaison [GéoPandas](http://geopandas.org/) pour tout ce qui est traitement  de volumes de données structurées importants
+- [PySAL](http://pysal.readthedocs.io/en/latest)
+- numpy pour les calculs scientifiques et comme dépendance quasi-systématique
+- [pyproj](https://jswhit.github.io/pyproj/) pour les projections
+- [jinja2](http://jinja.pocoo.org/docs) pour tout ce qui est templating
 
 ## Environnements virtuels
 
@@ -219,6 +219,7 @@ Toute chaîne est indexée :
 test = "Python"
 
 # Mémo
+
  +---+---+---+---+---+---+
  | P | y | t | h | o | n |
  +---+---+---+---+---+---+
@@ -226,6 +227,7 @@ test = "Python"
 -6  -5  -4  -3  -2  -1
 
 # Démo
+
 test[2:-1]
 > 'tho'
 
@@ -241,7 +243,6 @@ for lettre in test:
     print(lettre.upper())
 ```
 
-
 ### Itérables
 
 La compréhension de liste est un des paradigmes de la programmation fonctionnelle. Ses fonctions les plus classiques sont disponibles en Python. Par exemple, créer une liste des chiffres de 0 à 19 :
@@ -254,7 +255,6 @@ for n in range(20):
 print ("".join(nums))
 ```
 
-
 ```python
 # avec la compréhension en liste
 nums_inl = [str(n) for n in range(20)]
@@ -262,7 +262,6 @@ print ("".join(nums))
 ```
 
 Exemple de fonction intégrée :
-
 
 ```python
 # passer chaque élément d'un itérable à une fonction
@@ -275,7 +274,6 @@ print(map(double_ca, range(10)))
 
 Il est possible d'aller bien plus loin via le module itertools.
 
-
 ### Exercices
 
 #### Nombres premiers
@@ -286,21 +284,20 @@ Créer automatiquement une liste des nombres premiers compris entre 0 et 1000.
 
 Dans [le texte de présentation de l'ESIPE](http://esipe.u-pem.fr/esipe-mlv/presentation/), remplacer toutes les voyelles par leur index dans l'alphabet :
 
- - A = 1
- - E = 5 
- - etc.
+- A = 1
+- E = 5 
+- etc.
 
-----------
+----
 
-# Ressources
+## Ressources
 
- - [site officiel de Python](https://www.python.org/) ;
- - [documentation officielle](https://docs.python.org) ;
- - [Sam & Max (NSFW)](http://sametmax.com/cours-et-tutos/) ;
- - les [articles de Martin Laloux sur Portail SIG](http://www.portailsig.org/user/gene/track) ;
+- [site officiel de Python](https://www.python.org/) ;
+- [documentation officielle](https://docs.python.org) ;
+- [Sam & Max (NSFW)](http://sametmax.com/cours-et-tutos/) ;
+- les [articles de Martin Laloux sur Portail SIG](http://www.portailsig.org/user/gene/track) ;
 
-________
+----
 
 > Sources officielles du cours : https://github.com/Guts/ESIPE_IG3_2016
-
-> Contenu rédigé avec [StackEdit](https://stackedit.io/).
+> Contenu initialement rédigé avec [StackEdit](https://stackedit.io/).

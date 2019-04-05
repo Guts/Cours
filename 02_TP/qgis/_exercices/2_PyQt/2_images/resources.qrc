@@ -1,0 +1,16 @@
+<RCC>
+  <qresource prefix="plugins/datagouvbrowserfr">
+    <file>resources/download.svg</file>
+    <file>resources/refresh.svg</file>
+    <file>resources/undo.svg</file>
+    <file>resources/building-o.svg</file>
+    <file>resources/tag.svg</file>
+    <file>resources/bookmark_blue.svg</file>
+    <file>resources/cube.svg</file>
+    <file>resources/globe.svg</file>
+    <file>resources/rocket.svg</file>
+    <file>resources/search.svg</file>
+    <file>icon.png</file>
+    <file>resources/bolt.svg</file>
+  </qresource>
+</RCC>

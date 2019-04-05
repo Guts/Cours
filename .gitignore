@@ -237,3 +237,6 @@ output/*
 venv/
 virtenv/
 virtualenv/
+
+# credentials
+client_secrets*.json

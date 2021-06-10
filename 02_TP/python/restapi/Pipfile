@@ -8,7 +8,7 @@ pylint = "*"
 autopep8 = "*"
 
 [packages]
-django = "~=1.11.19"
+django = "~=2.2.24"
 django-cities-light = "~=3.5.0"
 djangorestframework = "~=3.9.1"
 drf-yasg = {extras = ["validation"],version = "*"}
